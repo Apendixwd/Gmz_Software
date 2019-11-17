@@ -42,7 +42,7 @@
           <items>
             <MenuItem mnemonicParsing="false" onAction="#startRecord" text="Aufzeichnung starten" />
             <MenuItem mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
-                  <MenuItem mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
+            <Menu mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#Close" text="Schließen" />
           </items>
