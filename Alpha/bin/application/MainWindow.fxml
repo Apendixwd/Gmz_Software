@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
-    <AnchorPane layoutX="-2.0" layoutY="-1.0" maxHeight="-1.0" maxWidth="-1.0" onMouseClicked="#Close" prefHeight="1083.0" prefWidth="1931.0" style="-fx-background-color: #4a4a4a;">
+    <AnchorPane layoutX="-2.0" layoutY="-11.0" maxHeight="-1.0" maxWidth="-1.0" onMouseClicked="#Close" prefHeight="1083.0" prefWidth="1931.0" style="-fx-background-color: #4a4a4a;">
          <children>
             <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="32.0" layoutY="805.0" prefHeight="52.0" prefWidth="296.0" style="-fx-background-color: grey;" text="0.00">
                <font>
@@ -42,23 +42,23 @@
           <items>
             <MenuItem mnemonicParsing="false" onAction="#startRecord" text="Aufzeichnung starten" />
             <MenuItem mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
-            <Menu mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
+                  <MenuItem mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#Close" text="Schließen" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Graph">
           <items>
-            <MenuItem mnemonicParsing="false" text="Lineare Ausgleichslinie (M x X + B)" />
-            <MenuItem mnemonicParsing="false" text="Ausgleichslinie (" />
+            <MenuItem mnemonicParsing="false" text="Lineare Ausgleichslinie zeichnen" />
+            <MenuItem mnemonicParsing="false" text="Exponentielle Ausgleichslinie zeichenen" />
             <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Graph exportieren" />
             <MenuItem mnemonicParsing="false" text="Paste" />
             <MenuItem mnemonicParsing="false" text="Delete" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Select All" />
             <MenuItem mnemonicParsing="false" text="Unselect All" />
+            <MenuItem mnemonicParsing="false" text="Werte als " />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Hilfe">
