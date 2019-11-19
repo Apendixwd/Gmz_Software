@@ -45,6 +45,12 @@ public class MainWindowController  {
 	}
 	
 	@FXML
+	public void fullScreen() {
+		
+		
+	}
+	
+	@FXML
 	public void showAboutWindow() {
         try {
         	Stage primaryStage = new Stage();
