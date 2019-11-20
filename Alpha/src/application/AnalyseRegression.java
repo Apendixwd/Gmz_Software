@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class AnalyseRegression {
 	
 	int [] x = {1,2,3,4,5,6,7};
-	double [] y = {0.38,1.15,2.71,3.92,5.93,8.56,11,24};
+	double [] y = {0.38,1.15,2.71,3.92,5.93,8.56,11.24};
 	
 	MainWindowController Controller = new MainWindowController();
 	
@@ -78,7 +78,7 @@ public class AnalyseRegression {
 				double Nenner = Avgxx - Avgx * Avgx;
 				double m = Zähler / Nenner;
 				
-				
+				System.out.println(m);
 			
 			return m;
 }

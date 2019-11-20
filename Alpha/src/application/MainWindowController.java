@@ -4,12 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
-import javafx.scene.chart.XYChart.Data;
-import javafx.scene.chart.XYChart.Series;
 import javafx.stage.Stage;
 
 public class MainWindowController  {
@@ -23,10 +17,11 @@ public class MainWindowController  {
 	}
 	
 	//MenuItems
-	public int countX = 10;
+	public int countX = 7;
 	@FXML
 	public void startRecord() {
-		System.out.println("Diagramm gestratet!");
+		AnalyseRegression test = new AnalyseRegression();
+		test.AnalyseLinear();
 		
 		}
 	
