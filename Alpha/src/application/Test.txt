@@ -1,4 +1,4 @@
-Zahl1	Zahl2
+Zahl	Zahl
 hallo	ich
 bin	otto
 wie	geht
