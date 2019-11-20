@@ -1,57 +1,48 @@
 package application;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.function.Predicate;
+import java.util.List;
+import java.util.Scanner;
 
-public class DataInput {
+public class DataImport {
+
     public static void main() {
-        try {
-            InputStream fileInputStream;
-            BufferedReader bufferedReader;
-            final +String filepathInSamePackage = "textfile.txt";
-            //filter predicate
-            Predicate<String> filterFirstLine =
-                    line -> !(
-                            "Name".equals(line.split("\t", -1)[0])
-                                    && "Hobby".equals(line.split("\t", -1)[1])
-                    );
+        String fileName= "Test.txt";
+        File file= new File(fileName);
 
-            //Implementation 1 returns Arrays as asked.
+        // this gives you a 2-dimensional array of strings
+        List<List<String>> lines = new ArrayList<>();
+        Scanner inputStream;
 
-            System.out.println("==ArrayList==");
-            fileInputStream = StreamTests.class.getResourceAsStream(filepathInSamePackage);
-            bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+        try{
+            inputStream = new Scanner(file);
 
-            bufferedReader
-                    .lines()
-                    .filter(filterFirstLine)
-                    .map(s -> {
-                        String[] splitStrings = s.split("\t", -1);
-                        return Arrays.asList(splitStrings);
-                    }).forEach(System.out::println);
+            while(inputStream.hasNext()){
+                String line= inputStream.next();
+                String[] values = line.split("\t");
+                // this adds the currently parsed line to the 2-dimensional string array
+                lines.add(Arrays.asList(values));
+            }
 
-            //Implementation 2 returns HashMap as another example
-
-            fileInputStream = StreamTests.class.getResourceAsStream(filepathInSamePackage);
-            bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
-            System.out.println("\n==HashMap==");
-
-            bufferedReader
-                    .lines()
-                    .filter(filterFirstLine)
-                    .map(s -> {
-                        String[] splitStrings = s.split("\t", -1);
-                        HashMap<String, String> stringStringMap = new HashMap<>();
-                        stringStringMap.put(splitStrings[0], splitStrings[1]);
-                        return stringStringMap;
-                    }).forEach(System.out::println);
-        }
-        catch (Exception e) {
+            inputStream.close();
+        }catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+        // the following code lets you iterate through the 2-dimensional array
+        int lineNo = 1;
+        for(List<String> line: lines) {
+            int columnNo = 1;
+            for (String value: line) {
+                System.out.println("Line " + lineNo + " Column " + columnNo + ": " + value);
+                columnNo++;
+            }
+            lineNo++;
+        }
     }
+
 }
+

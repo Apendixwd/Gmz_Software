@@ -1,0 +1,6 @@
+Zahl1	Zahl2
+hallo	ich
+bin	otto
+wie	geht
+es	dir
+so	denn
