@@ -9,7 +9,7 @@ import javafx.stage.Stage;
  
 public class Main  extends Application {
 	
-		private Stage primaryStage;
+		public Stage primaryStage;
 		
 		@Override
 		public void start(Stage primaryStage) {
@@ -18,6 +18,13 @@ public class Main  extends Application {
 		}
 		
 		public void mainWindow() {
+			double [] x = {1,2,3,4,5,6,7,8,9,10};
+			int[] y = {1,2,3,4,2,2,1,21,9,10};
+			AnalyseRegression test = new AnalyseRegression();
+			System.out.println("1");
+			
+		
+		
 			
 			try {
 				FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));

@@ -23,6 +23,7 @@ public class MainWindowController  {
 	}
 	
 	//MenuItems
+	public int countX = 10;
 	@FXML
 	public void startRecord() {
 		System.out.println("Diagramm gestratet!");
@@ -36,19 +37,19 @@ public class MainWindowController  {
 	}
 	@FXML
 	public void stopRecord() {
+	
+	}
+	@FXML
+	public void FullScreen() {
+		main.primaryStage.setFullScreen(true);
 		
-		
+	
 	}
 	@FXML
 	public void Close() {
 		System.exit(0);
 	}
 	
-	@FXML
-	public void fullScreen() {
-		
-		
-	}
 	
 	@FXML
 	public void showAboutWindow() {
