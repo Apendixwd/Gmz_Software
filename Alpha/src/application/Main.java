@@ -21,7 +21,7 @@ public class Main  extends Application {
 			double [] x = {1,2,3,4,5,6,7,8,9,10};
 			int[] y = {1,2,3,4,2,2,1,21,9,10};
 			AnalyseRegression test = new AnalyseRegression();
-			System.out.println("1");
+			System.out.println(test.AnalyseLinear());
 			
 		
 		

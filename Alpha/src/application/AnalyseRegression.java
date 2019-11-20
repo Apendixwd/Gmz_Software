@@ -1,18 +1,23 @@
 package application;
 
+import java.util.Arrays;
+
 public class AnalyseRegression {
+	
+	int [] x = {1,2,3,4,5,6,7};
+	double [] y = {0.38,1.15,2.71,3.92,5.93,8.56,11,24};
 	
 	MainWindowController Controller = new MainWindowController();
 	
 	
-		private double [] getXY(double [] arrayy, int [] x) {
+		private double [] getXY(int [] x, double [] y) {
 		
 				int count = 0;
 				double xy [] = new double[Controller.countX];
 			
 					while (count < x.length) {
 				
-						xy [count] = arrayy [count] * x[count];
+						xy [count] = y [count] * x[count];
 						count ++;	
 				}
 				
@@ -48,7 +53,7 @@ public class AnalyseRegression {
 			return LnY;
 		}
 		
-		private double[] getXLnY(double [] y,int [] x) {
+		public double[] getXLnY(int [] x,double [] y) {
 			
 			int count = 0;
 			double XLnY [] = new double[Controller.countX];
@@ -63,9 +68,19 @@ public class AnalyseRegression {
 		}
 		
 		
-		public double analyse (double [] arrayy, int[] x) {
-		
-			return 0;
+		public double AnalyseLinear () {
+				double Avgx = Arrays.stream(x).average().orElse(Double.NaN);
+				double Avgy = Arrays.stream(y).average().orElse(Double.NaN);
+				double Avgxy = Arrays.stream(getXY(x,y)).average().orElse(Double.NaN);
+				double Avgxx = Arrays.stream(getXX(x)).average().orElse(Double.NaN);
+				
+				double Zähler = Avgxy - Avgx * Avgy;
+				double Nenner = Avgxx - Avgx * Avgx;
+				double m = Zähler / Nenner;
+				
+				
+			
+			return m;
 }
 
 	
