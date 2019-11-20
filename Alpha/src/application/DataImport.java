@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class DataImport {
 
     public static void main() {
-        String fileName= "Test.txt";
+        String fileName= "application/Test.txt";
         File file= new File(fileName);
 
         // this gives you a 2-dimensional array of strings

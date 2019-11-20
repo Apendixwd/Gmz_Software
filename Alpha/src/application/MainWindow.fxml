@@ -78,23 +78,23 @@
             <MenuItem mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
                   <MenuItem mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Vollbild" onAction="#FullScreen" />
+                  <MenuItem mnemonicParsing="false" onAction="#FullScreen" text="Vollbild" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#Close" text="Schließen" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Graph">
           <items>
-            <MenuItem mnemonicParsing="false" text="Lineare Regression (M * X + B)" />
-            <MenuItem mnemonicParsing="false" text="Exponential Regresseion (M^X + B)" />
-                  <MenuItem mnemonicParsing="false" text="Pontential Regresseion (X^n + B)" />
+            <MenuItem mnemonicParsing="false" onAction="#DrawLinearRegression" text="Lineare Regression (M * X + B)" />
+            <MenuItem mnemonicParsing="false" onAction="#DrawExponentialRegression" text="Exponential Regresseion (M^X + B)" />
             <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Regressionen entfernen" />
+                  <MenuItem mnemonicParsing="false" onAction="#DeleteAllRegressions" text="Regressionen entfernen" />
           </items>
         </Menu>
             <Menu mnemonicParsing="false" text="Messreihe">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Daten exportieren" />
+                  <MenuItem mnemonicParsing="false" onAction="#ImportData" text="Daten importieren" />
+                  <MenuItem mnemonicParsing="false" onAction="#ExportData" text="Daten exportieren" />
                </items>
             </Menu>
         <Menu mnemonicParsing="false" text="Hilfe">

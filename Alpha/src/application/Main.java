@@ -15,14 +15,14 @@ public class Main  extends Application {
 		public void start(Stage primaryStage) {
 			this.primaryStage = primaryStage;
 			mainWindow();
+			
+			//Verbingung zur Datei DataImport.java
+			DataImport.main();
 		}
 		
 		public void mainWindow() {
-			DataImport.main();
 			
-		
-		
-			
+		//Das Main-Window wird mit der .fxml Datei "MainWindow.fxml" erstellt und geöffnet
 			try {
 				FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindow.fxml"));
 				AnchorPane pane = (AnchorPane) loader.load();
