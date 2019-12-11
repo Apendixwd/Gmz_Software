@@ -19,6 +19,7 @@ public class MainWindowController  {
 	
 	
 	//Werte der abgeschlossenden Messung werden in Arrays gespeichert
+		AnalyseRegression Analyse = new AnalyseRegression();
 		public final int countX = 7;
 		public final int [] x = {1,2,3,4,5,6,7}; //Testwert
 		public final double [] y = {1,2,3,4,5,6,7}; //Testwert
@@ -26,10 +27,13 @@ public class MainWindowController  {
 		
 //MenuItems
 		
-	//Menü	
+	//Menï¿½	
 	@FXML
 	public void startRecord() {
-	
+		double hallo = Analyse.AnalyseExponential(x,y,countX)[0];
+		double hallo1 = Analyse.AnalyseExponential(x,y,countX)[1];
+		System.out.println(hallo);
+		System.out.println(hallo1);
 		
 	}
 	

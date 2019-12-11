@@ -4,14 +4,11 @@ import java.util.Arrays;
 
 public class AnalyseRegression {
 	
-	MainWindowController Controller = new MainWindowController();
-			
-	
 	//Arrays für xy , xx , Ln(y) und XLn(y) werden erstellt
-		private double [] getXY(int [] x, double [] y) {
+		private double [] getXY(int [] x, double [] y,int countX) {
 		
 				int count = 0;
-				double xy [] = new double[Controller.countX];
+				double xy [] = new double[countX];
 			
 					while (count < x.length) {
 				
@@ -23,10 +20,10 @@ public class AnalyseRegression {
 		}
 	
 	
-		private double[] getXX(int [] x) {
+		private double[] getXX(int [] x, int countX) {
 		
 			int count = 0;
-			double xx [] = new double[Controller.countX];
+			double xx [] = new double[countX];
 		
 				while (count < x.length) {
 			
@@ -37,10 +34,10 @@ public class AnalyseRegression {
 			return xx;
 		}
 		
-		private double[] getLnY(double [] y) {
+		private double[] getLnY(double [] y, int countX) {
 			
 			int count = 0;
-			double LnY [] = new double[Controller.countX];
+			double LnY [] = new double[countX];
 		
 				while (count < y.length) {
 			
@@ -51,10 +48,10 @@ public class AnalyseRegression {
 			return LnY;
 		}
 		
-		public double[] getXLnY(int [] x,double [] y) {
+		public double[] getXLnY(int [] x,double [] y, int countX) {
 			
 			int count = 0;
-			double XLnY [] = new double[Controller.countX];
+			double XLnY [] = new double[countX];
 		
 			while (count < y.length) {
 			
@@ -66,11 +63,11 @@ public class AnalyseRegression {
 		}
 		
 		//Konstanten m und n der Linearfunktion werden berechnent
-		public double [] AnalyseLinear () {
-				double Avgx = Arrays.stream(Controller.x).average().orElse(Double.NaN);
-				double Avgy = Arrays.stream(Controller.y).average().orElse(Double.NaN);
-				double Avgxy = Arrays.stream(getXY(Controller.x,Controller.y)).average().orElse(Double.NaN);
-				double Avgxx = Arrays.stream(getXX(Controller.x)).average().orElse(Double.NaN);
+		public double [] AnalyseLinear (int [] x, double [] y, int countX) {
+				double Avgx = Arrays.stream(x).average().orElse(Double.NaN);
+				double Avgy = Arrays.stream(y).average().orElse(Double.NaN);
+				double Avgxy = Arrays.stream(getXY(x,y,countX)).average().orElse(Double.NaN);
+				double Avgxx = Arrays.stream(getXX(x,countX)).average().orElse(Double.NaN);
 				
 				double Zähler = Avgxy - Avgx * Avgy;
 				double Nenner = Avgxx - Avgx * Avgx;
@@ -82,11 +79,11 @@ public class AnalyseRegression {
 			return Result;
 }
 		//Konstanten k und d der Exponentialfunktion werden berechnet
-		public double [] AnalyseExponential () {
-				double Avgx = Arrays.stream(Controller.x).average().orElse(Double.NaN);
-				double AvgLny = Arrays.stream(getLnY(Controller.y)).average().orElse(Double.NaN);
-				double AvgxLny = Arrays.stream(getXLnY(Controller.x,Controller.y)).average().orElse(Double.NaN);
-				double Avgxx = Arrays.stream(getXX(Controller.x)).average().orElse(Double.NaN);
+		public double [] AnalyseExponential (int [] x, double [] y, int countX) {
+				double Avgx = Arrays.stream(x).average().orElse(Double.NaN);
+				double AvgLny = Arrays.stream(getLnY(y, countX)).average().orElse(Double.NaN);
+				double AvgxLny = Arrays.stream(getXLnY(x,y,countX)).average().orElse(Double.NaN);
+				double Avgxx = Arrays.stream(getXX(x,countX)).average().orElse(Double.NaN);
 			
 				double Zähler = AvgxLny - AvgLny * Avgx;
 				double Nenner = Avgxx - Avgx * Avgx;

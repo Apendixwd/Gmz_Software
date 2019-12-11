@@ -1,0 +1,6 @@
+Zahl	Zahl
+hallo	ich
+bin	otto
+wie	geht
+es	dir
+so	denn
