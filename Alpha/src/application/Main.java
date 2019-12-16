@@ -17,7 +17,6 @@ public class Main  extends Application {
 			mainWindow();
 			
 			//Verbingung zur Datei DataImport.java
-			DataImport.main();
 		}
 		
 		public void mainWindow() {

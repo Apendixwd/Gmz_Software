@@ -87,7 +87,7 @@ public class MainWindowController  {
 	
 	//Messreihe
 	@FXML
-	public void importData() {
+	public void ImportData() {
 		Stage primaryStage = new Stage();
 		FileChooser file = new FileChooser();
 		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
@@ -111,9 +111,9 @@ public class MainWindowController  {
 				}
 				else    {
 					System.out.println(fields[3]);
-					Integer DataSolution = Integer.valueOf(fields[3]);
-					ArrayList<Integer> Daten = new ArrayList<Integer>();
-					Daten.add(DataSolution);
+					/* Integer DataSolution = Integer.valueOf(fields[3]);
+					ArrayList<String> Daten = new ArrayList<String>();
+					Daten.add(fields[3]); */
 				}
 			}
 
