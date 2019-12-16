@@ -1,63 +1,48 @@
 package application;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
-import com.sun.prism.impl.Disposer;
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+public class DataImport {
 
-import javax.swing.*;
+    public static void main() {
+        String fileName= "application/Test.txt";
+        File file= new File(fileName);
 
-public class DataImport extends MainWindowController {
+        // this gives you a 2-dimensional array of strings
+        List<List<String>> lines = new ArrayList<>();
+        Scanner inputStream;
 
-    public static void readTSV() {
+        try{
+            inputStream = new Scanner(file);
 
-            // System.out.println(MainWindowController.value);
-            String TsvFile = "" + "C:/Users/ottor/Desktop/Test/src/sample/Test.txt";
-            String FieldDelimiter = "\t";
-
-        BufferedReader br;
-
-        try {
-            br = new BufferedReader ( new FileReader ( TsvFile ) );
-            int fLine = 0;
-            String line = null;
-            while ((line = br.readLine ( )) != null) {
-                String[] fields = line.split ( FieldDelimiter, -1 );
-            if (fLine == 0) {
-            fLine ++;
-
-            }
-            else    {
-                System.out.println(fields[3]);
-                /* Integer DataSolution = Integer.valueOf(fields[3]);
-                ArrayList<Integer> Daten = new ArrayList<Integer>();
-                Daten.add(DataSolution); */
-            }
+            while(inputStream.hasNext()){
+                String line= inputStream.next();
+                String[] values = line.split("\t");
+                // this adds the currently parsed line to the 2-dimensional string array
+                lines.add(Arrays.asList(values));
             }
 
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger ( Main.class.getName ( ) )
-                    .log ( Level.SEVERE, null, ex );
-        } catch (IOException ex) {
-            Logger.getLogger ( Main.class.getName ( ) )
-                    .log ( Level.SEVERE, null, ex );
+            inputStream.close();
+        }catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
+        // the following code lets you iterate through the 2-dimensional array
+        int lineNo = 1;
+        for(List<String> line: lines) {
+            int columnNo = 1;
+            for (String value: line) {
+                System.out.println("Line " + lineNo + " Column " + columnNo + ": " + value);
+                columnNo++;
+            }
+            lineNo++;
+        }
     }
+
 }
+
