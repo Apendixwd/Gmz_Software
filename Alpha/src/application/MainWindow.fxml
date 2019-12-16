@@ -79,24 +79,23 @@
                   <MenuItem mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" onAction="#FullScreen" text="Vollbild" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#importData" text="Daten importieren" />
+                  <MenuItem mnemonicParsing="false" text="Daten exportieren" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" onAction="#Close" text="Schließen" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Graph">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#DrawLinearRegression" text="Lineare Regression (M * X + B)" />
-            <MenuItem mnemonicParsing="false" onAction="#DrawExponentialRegression" text="Exponential Regresseion (M^X + B)" />
+            <MenuItem mnemonicParsing="false" text="Lineare Regression (M * X + B)" />
+            <MenuItem mnemonicParsing="false" text="Exponential Regresseion (M^X + B)" />
+                  <MenuItem mnemonicParsing="false" text="Pontential Regresseion (X^n + B)" />
             <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#DeleteAllRegressions" text="Regressionen entfernen" />
+                  <MenuItem mnemonicParsing="false" text="Regressionen entfernen" />
           </items>
         </Menu>
-            <Menu mnemonicParsing="false" text="Messreihe">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#ImportData" text="Daten importieren" />
-                  <MenuItem mnemonicParsing="false" onAction="#ExportData" text="Daten exportieren" />
-               </items>
-            </Menu>
+            <Menu mnemonicParsing="false" text="Messreihe" />
         <Menu mnemonicParsing="false" text="Hilfe">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#showAboutWindow" text="About" />
