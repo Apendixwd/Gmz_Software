@@ -1,0 +1,23 @@
+#MainWindowController{
+  -fx-background-color: white;
+  -fx-prefWidth: 1920.0;
+  -fx-prefHeight: 1080.0;
+  -fx-maxWidth: -Infinity;
+  -fx-maxHeight: -Infinity;
+}
+
+#Content {
+  -fx-background-color: white;
+  -fx-prefWidth: 1920.0;
+  -fx-prefHeight: 1080.0;
+}
+
+#MenuBar {
+  -fx-background-color: white;
+  -fx-color: white;
+  -fx-text-fill: white;
+}
+
+#MenuBar_Menu {
+  -fx-text-fill: white;
+}

@@ -4,11 +4,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SelectionMode;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.print.DocFlavor;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -108,13 +111,14 @@ public class MainWindowController  {
             
             primaryStage.setTitle("About GMZ-Software");
             primaryStage.setScene(new Scene(root));
-            primaryStage.show();
+
          
         } catch(Exception e) {
             e.printStackTrace();
         }
     }
+	// Table Input
 
-	
-}
+	}
+
 

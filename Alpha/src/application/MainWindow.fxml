@@ -18,17 +18,17 @@
 <?import javafx.scene.text.Font?>
 
 <?import java.net.URL?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+<AnchorPane fx:id="MainWindow" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
-    <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #000213;">
+    <AnchorPane fx:id="Content" layoutX="-2.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1920.0">
          <children>
-            <TabPane layoutY="25.0" prefHeight="800.0" prefWidth="1923.0" style="-fx-border-color: yellow; -fx-border-style: dashed; -fx-border-width: 1;" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutY="25.0" prefHeight="800.0" prefWidth="1923.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
-                <Tab closable="false" style="-fx-background-color: #000213;" text="Graph">
+                <Tab closable="false" text="Graph">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #000213;">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <LineChart alternativeColumnFillVisible="true" focusTraversable="true" layoutX="126.0" layoutY="42.0" prefHeight="700.0" prefWidth="1400.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="274.0">
+                              <LineChart alternativeColumnFillVisible="true" focusTraversable="true" layoutX="126.0" layoutY="42.0" prefHeight="700.0" prefWidth="1400.0" AnchorPane.rightAnchor="274.0">
                                 <xAxis>
                                   <CategoryAxis fx:id="X" label="Zeit in Minuten" side="BOTTOM" />
                                 </xAxis>
@@ -43,14 +43,14 @@
                         </AnchorPane>
                   </content>
                 </Tab>
-                <Tab style="-fx-background-color: #000213;" text="Messreihe">
+                <Tab text="Messreihe">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #000213;">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView layoutX="393.0" layoutY="32.0" prefHeight="605.0" prefWidth="994.0">
+                              <TableView layoutX="393.0" layoutY="32.0" prefHeight="605.0" prefWidth="994.0" fx:id="DataTable">
                                 <columns>
-                                  <TableColumn prefWidth="511.0" text="Zeit in Minuten" />
-                                  <TableColumn minWidth="0.0" prefWidth="482.0" text="Zählrate in CPM" />
+                                  <TableColumn prefWidth="511.0" text="Zeit in Minuten" fx:id="Time"/>
+                                  <TableColumn minWidth="0.0" prefWidth="482.0" text="Zählrate in CPM" fx:id="Messure"/>
                                 </columns>
                               </TableView>
                            </children>
@@ -59,21 +59,21 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="244.0" layoutY="874.0" prefHeight="52.0" prefWidth="296.0" style="-fx-background-color: #E2E5F6;" text="0.00" textFill="#02074a">
+            <Label alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="244.0" layoutY="874.0" prefHeight="52.0" prefWidth="296.0" text="0.00" textFill="#02074a">
                <font>
                   <Font size="34.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="244.0" layoutY="946.0" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #E2E5F6;">
+            <ChoiceBox layoutX="244.0" layoutY="946.0" prefHeight="25.0" prefWidth="86.0">
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
             </ChoiceBox>
          </children>
       </AnchorPane>
-    <MenuBar prefHeight="25.0" prefWidth="1600.0" style="-fx-background-color: #000213;">
+    <MenuBar prefHeight="25.0" prefWidth="1920.0" fx:id="MenuBar">
       <menus>
-        <Menu mnemonicParsing="false" text="Menü">
+        <Menu fx:id="MenuBar_Menu" mnemonicParsing="false" text="Menü">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#startRecord" text="Aufzeichnung starten" />
             <MenuItem mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
@@ -110,4 +110,3 @@
     </MenuBar>
    </children>
 </AnchorPane>
-
