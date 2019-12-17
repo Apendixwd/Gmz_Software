@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DataImport {
-    
+
     public static void main() {
 
     Stage primaryStage = new Stage();
@@ -21,17 +21,18 @@ public class DataImport {
     File Datei = file.showOpenDialog(primaryStage);
     String TsvFile = "" + Datei;
     String FieldDelimiter = "\t";
-
         BufferedReader br;
+        BufferedReader br2;
 		try {
         br = new BufferedReader ( new FileReader ( TsvFile ) );
-        long lineAmountCache = br.lines().count();
+        long lineAmountCache = br.lines().count() - 1;
         int lineAmount = (int) lineAmountCache;
         int currentLine = 0;
         Double[] Data = new Double[lineAmount];
         int fLine = 0;
         String line = null;
-        while ((line = br.readLine ( )) != null) {
+        br2 = new BufferedReader ( new FileReader ( TsvFile ) );
+        while ((line = br2.readLine ( )) != null) {
             String[] fields = line.split ( FieldDelimiter, -1 );
             if (fLine == 0) {
                 fLine ++;
