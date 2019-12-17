@@ -5,13 +5,12 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DataImport {
-
-    public static double[] Data;
-
+    
     public static void main() {
 
     Stage primaryStage = new Stage();
@@ -42,8 +41,10 @@ public class DataImport {
                     fields[3] = fields[3].replace(",", ".");
                     double DataSolution = Double.parseDouble(fields[3]);
                     Data[currentLine] = DataSolution;
+                    currentLine ++;
             }
         }
+        System.out.println(Arrays.asList(Data));
     } catch (
     FileNotFoundException ex) {
         Logger.getLogger ( Main.class.getName ( ) )
