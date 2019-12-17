@@ -23,11 +23,13 @@ public class DataImport {
     String TsvFile = "" + Datei;
     String FieldDelimiter = "\t";
 
-    BufferedReader br;
-
+        BufferedReader br;
 		try {
         br = new BufferedReader ( new FileReader ( TsvFile ) );
-        ArrayList<Double> Data = new ArrayList<Double>();
+        long lineAmountCache = br.lines().count();
+        int lineAmount = (int) lineAmountCache;
+        int currentLine = 0;
+        Double[] Data = new Double[lineAmount];
         int fLine = 0;
         String line = null;
         while ((line = br.readLine ( )) != null) {
@@ -39,11 +41,9 @@ public class DataImport {
             else    {
                     fields[3] = fields[3].replace(",", ".");
                     double DataSolution = Double.parseDouble(fields[3]);
-                    Data.add(DataSolution);
-
+                    Data[currentLine] = DataSolution;
             }
         }
-        System.out.print(Data);
     } catch (
     FileNotFoundException ex) {
         Logger.getLogger ( Main.class.getName ( ) )
