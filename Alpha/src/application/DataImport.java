@@ -43,7 +43,6 @@ public class DataImport {
                     currentLine++;
                 }
             }
-            System.out.println(Arrays.asList(Data));
         } catch (
                 FileNotFoundException ex) {
             Logger.getLogger(Main.class.getName())
