@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca39f1f9-8ab2-4722-85e1-29bfaa0b5260" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,24 +18,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TtBLwV4byKhaW3JKjKB7YbOhfo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
@@ -47,6 +40,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\ottor\AppData\Roaming\Subversion</configuration>
@@ -73,5 +78,50 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="382" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576595422020">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="382" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576595422020" />
+    <state x="634" y="280" key="FileChooserDialogImpl" timestamp="1576595356836">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="634" y="280" key="FileChooserDialogImpl/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576595356836" />
+    <state width="1814" height="295" key="GridCell.Tab.0.bottom" timestamp="1576596289225">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576596289225" />
+    <state width="1814" height="295" key="GridCell.Tab.0.center" timestamp="1576596289224">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576596289224" />
+    <state width="1814" height="295" key="GridCell.Tab.0.left" timestamp="1576596289224">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576596289224" />
+    <state width="1814" height="295" key="GridCell.Tab.0.right" timestamp="1576596289225">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576596289225" />
+    <state x="408" y="113" key="SettingsEditor" timestamp="1576595361828">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="408" y="113" key="SettingsEditor/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576595361828" />
+    <state x="629" y="362" key="com.intellij.ide.util.TipDialog" timestamp="1576595327874">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="629" y="362" key="com.intellij.ide.util.TipDialog/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576595327874" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Alpha/src/application/MainWindowController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

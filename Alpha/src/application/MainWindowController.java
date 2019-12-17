@@ -45,8 +45,7 @@ public class MainWindowController  {
 	
 	
 	public void pauseRecord() {
-		
-		
+
 	}
 	
 	@FXML
@@ -88,44 +87,8 @@ public class MainWindowController  {
 	//Messreihe
 	@FXML
 	public void ImportData() {
-		Stage primaryStage = new Stage();
-		FileChooser file = new FileChooser();
-		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
-		file.getExtensionFilters().add(extFilter);
-		file.setTitle("Datei öffnen");
-		File Datei = file.showOpenDialog(primaryStage);
-		String TsvFile = "" + Datei;
-		String FieldDelimiter = "\t";
-
-		BufferedReader br;
-
-		try {
-			br = new BufferedReader ( new FileReader ( TsvFile ) );
-			int fLine = 0;
-			String line = null;
-			while ((line = br.readLine ( )) != null) {
-				String[] fields = line.split ( FieldDelimiter, -1 );
-				if (fLine == 0) {
-					fLine ++;
-
-				}
-				else    {
-					System.out.println(fields[3]);
-					/* Integer DataSolution = Integer.valueOf(fields[3]);
-					ArrayList<String> Daten = new ArrayList<String>();
-					Daten.add(fields[3]); */
-				}
+		DataImport.main();
 			}
-
-		} catch (FileNotFoundException ex) {
-			Logger.getLogger ( Main.class.getName ( ) )
-					.log ( Level.SEVERE, null, ex );
-		} catch (IOException ex) {
-			Logger.getLogger ( Main.class.getName ( ) )
-					.log ( Level.SEVERE, null, ex );
-		}
-
-	}
 	
 	@FXML
 	public void ExportData() {
