@@ -10,8 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DataImport {
-    public static void main() {
-        Double[] Data;
+    public static Double [] main() {
+        Double[] Data = new Double[0];
         Stage primaryStage = new Stage();
         FileChooser file = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
@@ -53,5 +53,6 @@ public class DataImport {
             Logger.getLogger(Main.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
+        return Data;
     }
 }

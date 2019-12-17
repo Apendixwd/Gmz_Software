@@ -87,7 +87,7 @@ public class MainWindowController  {
 	//Messreihe
 	@FXML
 	public void ImportData() {
-		DataImport.main();
+		System.out.println(DataImport.main());
 			}
 	
 	@FXML
