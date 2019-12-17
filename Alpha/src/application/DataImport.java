@@ -9,13 +9,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DataImport {
+
+    public static double[] Data;
+
     public static void main() {
 
     Stage primaryStage = new Stage();
     FileChooser file = new FileChooser();
     FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
-		file.getExtensionFilters().add(extFilter);
-		file.setTitle("Datei öffnen");
+    file.getExtensionFilters().add(extFilter);
+    file.setTitle("Datei öffnen");
     File Datei = file.showOpenDialog(primaryStage);
     String TsvFile = "" + Datei;
     String FieldDelimiter = "\t";
@@ -24,6 +27,7 @@ public class DataImport {
 
 		try {
         br = new BufferedReader ( new FileReader ( TsvFile ) );
+        ArrayList<Double> Data = new ArrayList<Double>();
         int fLine = 0;
         String line = null;
         while ((line = br.readLine ( )) != null) {
@@ -33,15 +37,13 @@ public class DataImport {
 
             }
             else    {
-               // System.out.println(fields[3]);
                     fields[3] = fields[3].replace(",", ".");
-                    Double DataSolution = Double.valueOf(fields[3]);
-					ArrayList<Double> Daten = new ArrayList<Double>();
-					Daten.add(DataSolution);
-					System.out.println(Daten);
+                    double DataSolution = Double.parseDouble(fields[3]);
+                    Data.add(DataSolution);
+
             }
         }
-
+        System.out.print(Data);
     } catch (
     FileNotFoundException ex) {
         Logger.getLogger ( Main.class.getName ( ) )
