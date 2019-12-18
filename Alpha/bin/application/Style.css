@@ -12,8 +12,21 @@
   -fx-prefHeight: 1080.0;
 }
 
+#TabPane    {
+    -fx-prefWidth: 1920;
+    -fx-prefHeight: 800;
+    -fx-layoutY: 25.0;
+}
+
+#TabPane_Anchor {
+    minHeight: 0.0;
+    minWidth: 0.0;
+    prefHeight: 180.0;
+    prefWidth: 200.0;
+}
+
 #MenuBar {
-  -fx-background-color: white;
+  -fx-background-color: #00ccff;
   -fx-color: white;
   -fx-text-fill: white;
 }

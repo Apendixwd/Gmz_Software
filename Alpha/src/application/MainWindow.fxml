@@ -20,9 +20,9 @@
 <?import java.net.URL?>
 <AnchorPane fx:id="MainWindow" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
-    <AnchorPane fx:id="Content" layoutX="-2.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1920.0">
+    <AnchorPane fx:id="Content" layoutX="-2.0" layoutY="-1.0">
          <children>
-            <TabPane layoutY="25.0" prefHeight="800.0" prefWidth="1923.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane fx:id="TabPane" layoutY="25.0" prefHeight="800.0" prefWidth="1920.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab closable="false" text="Graph">
                   <content>
