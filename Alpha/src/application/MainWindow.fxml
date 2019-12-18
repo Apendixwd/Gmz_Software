@@ -15,25 +15,23 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<?import java.net.URL?>
-<AnchorPane fx:id="MainWindow" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
-    <AnchorPane fx:id="Content" layoutX="-2.0" layoutY="-1.0">
+    <AnchorPane fx:id="TabPane" layoutY="56.0" prefHeight="669.0" prefWidth="1920.0">
          <children>
-            <TabPane fx:id="TabPane" layoutY="25.0" prefHeight="800.0" prefWidth="1920.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutY="-32.0" prefHeight="700.0" prefWidth="1930.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab closable="false" text="Graph">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane>
                            <children>
-                              <LineChart alternativeColumnFillVisible="true" focusTraversable="true" layoutX="126.0" layoutY="42.0" prefHeight="700.0" prefWidth="1400.0" AnchorPane.rightAnchor="274.0">
+                              <LineChart alternativeColumnFillVisible="true" focusTraversable="true" layoutX="245.0" layoutY="12.0" prefHeight="642.0" prefWidth="1430.0">
                                 <xAxis>
-                                  <CategoryAxis fx:id="X" label="Zeit in Minuten" side="BOTTOM" />
+                                  <CategoryAxis fx:id="X" label="Zeit in Minuten" />
                                 </xAxis>
                                 <yAxis>
-                                  <NumberAxis fx:id="Y" label="Zählrate in Cpm" side="LEFT" />
+                                  <NumberAxis fx:id="Y" label="Zählrate in Cpm" />
                                 </yAxis>
                               </LineChart>
                            </children>
@@ -45,12 +43,12 @@
                 </Tab>
                 <Tab text="Messreihe">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane>
                            <children>
-                              <TableView layoutX="393.0" layoutY="32.0" prefHeight="605.0" prefWidth="994.0" fx:id="DataTable">
+                              <TableView layoutX="478.0" layoutY="133.0" prefHeight="400.0" prefWidth="964.0">
                                 <columns>
-                                  <TableColumn prefWidth="511.0" text="Zeit in Minuten" fx:id="Time"/>
-                                  <TableColumn minWidth="0.0" prefWidth="482.0" text="Zählrate in CPM" fx:id="Messure"/>
+                                  <TableColumn prefWidth="110.0" text="Zeit in Minuten" />
+                                  <TableColumn minWidth="0.0" prefWidth="853.0" text="Zählrate in CPM" />
                                 </columns>
                               </TableView>
                            </children>
@@ -59,48 +57,38 @@
                 </Tab>
               </tabs>
             </TabPane>
-            <Label alignment="CENTER_LEFT" contentDisplay="LEFT" layoutX="244.0" layoutY="874.0" prefHeight="52.0" prefWidth="296.0" text="0.00" textFill="#02074a">
-               <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-            <ChoiceBox layoutX="244.0" layoutY="946.0" prefHeight="25.0" prefWidth="86.0">
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </ChoiceBox>
          </children>
       </AnchorPane>
-    <MenuBar prefHeight="25.0" prefWidth="1920.0" fx:id="MenuBar">
+    <MenuBar prefHeight="25.0" prefWidth="1924.0">
       <menus>
-        <Menu fx:id="MenuBar_Menu" mnemonicParsing="false" text="Menü">
+        <Menu text="Menü">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#startRecord" text="Aufzeichnung starten" />
-            <MenuItem mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
-                  <MenuItem mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#FullScreen" text="Vollbild" />
+            <MenuItem fx:id="menuitem_start" mnemonicParsing="false" onAction="#startRecord" text="Aufzeichnung starten" />
+            <MenuItem fx:id="menuitem_pause" mnemonicParsing="false" onAction="#pauseRecord" text="Aufzeichung pausieren" />
+            <MenuItem fx:id="menuitem_reset" mnemonicParsing="false" onAction="#stopRecord" text="Aufzeichung zurücksetzen" />
             <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" onAction="#Close" text="Schließen" />
+            <MenuItem fx:id="menuitem_fullscreen" mnemonicParsing="false" onAction="#FullScreen" text="Vollbild" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="menuitem_close" mnemonicParsing="false" onAction="#Close" text="Schließen" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Graph">
+        <Menu fx:id="menu_graph" mnemonicParsing="false" text="Graph">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#DrawLinearRegression" text="Lineare Regression (M * X + B)" />
-            <MenuItem mnemonicParsing="false" onAction="#DrawExponentialRegression" text="Exponential Regresseion (M^X + B)" />
+            <MenuItem fx:id="menuitem_linear" mnemonicParsing="false" onAction="#DrawLinearRegression" text="Lineare Regression (M * X + B)" />
+            <MenuItem fx:id="menuitem_exponential" mnemonicParsing="false" onAction="#DrawExponentialRegression" text="Exponential Regresseion (M^X + B)" />
             <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" onAction="#DeleteAllRegressions" text="Regressionen entfernen" />
+            <MenuItem fx:id="menuitem_resetregression" mnemonicParsing="false" onAction="#DeleteAllRegressions" text="Regressionen entfernen" />
           </items>
         </Menu>
-            <Menu mnemonicParsing="false" text="Messreihe">
+            <Menu fx:id="menu_messurement" mnemonicParsing="false" text="Messreihe">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#ImportData" text="Daten importieren" />
-                  <MenuItem mnemonicParsing="false" onAction="#ExportData" text="Daten exportieren" />
+                  <MenuItem fx:id="menuitem_import" mnemonicParsing="false" onAction="#ImportData" text="Daten importieren" />
+                  <MenuItem fx:id="menuitem_export" mnemonicParsing="false" onAction="#ExportData" text="Daten exportieren" />
                </items>
             </Menu>
         <Menu mnemonicParsing="false" text="Hilfe">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#showAboutWindow" text="About" />
+            <MenuItem fx:id="menuitem_help" mnemonicParsing="false" onAction="#showAboutWindow" text="About" />
           </items>
         </Menu>
       </menus>
@@ -108,5 +96,9 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
     </MenuBar>
+      <Label fx:id="countLabel" layoutX="79.0" layoutY="797.0" prefHeight="52.0" prefWidth="237.0" text="0.00">
+            </Label>
+      <ChoiceBox layoutX="79.0" layoutY="849.0" prefHeight="37.0" prefWidth="237.0">
+            </ChoiceBox>
    </children>
 </AnchorPane>

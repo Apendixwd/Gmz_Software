@@ -30,7 +30,7 @@ public class Main  extends Application {
 				primaryStage.setMaxWidth(1920);
 				MainWindowController mainWindowController = loader.getController();
 				mainWindowController.setMain(this);
-				
+
 				Scene scene = new Scene(pane);
 				scene.getStylesheets().add("application/Style.css");
 				primaryStage.getIcons().add(new Image("pictures/logo.png"));

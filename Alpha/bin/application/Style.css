@@ -1,36 +1,87 @@
-#MainWindowController{
+.root {
   -fx-background-color: white;
-  -fx-prefWidth: 1920.0;
-  -fx-prefHeight: 1080.0;
-  -fx-maxWidth: -Infinity;
-  -fx-maxHeight: -Infinity;
+  -fx-prefWidth: 1600.0;
+  -fx-prefHeight: 900.0;
+  -fx-minWidth: 1600.0;
+  -fx-minHeight: 900.0;
+  -fx-font-weight: bold;
+  -fx-font-type: Arial;
+}
+.menu-bar {
+  -fx-background-color: #2b2b2b;
+}
+.tab {
+  -fx-background-color: black;
+  -fx-background-radius: 0.0;
+  -fx-border: none;
+}
+.tab:selected:top {
+  -fx-background-color: #0DA0FC;
+  -fx-border-color: #0583FA;
+  -fx-border-type: solid;
+  -fx-border-width: 3px;
+}
+.tab-label  {
+  -fx-text-fill: #9c9c9c;
+}
+.tab:hover  {
+  -fx-background-color: #0DA0FC;
+}
+#TabPane {
+  -fx-border-color: #0583FA;
+  -fx-border-type: solid;
+  -fx-border-width: 5px;
+}
+.tab-header-background  {
+  -fx-background-color: #0583FA;
+}
+.label  {
+  -fx-text-fill: #9c9c9c;
+}
+.menu:openvertically:hover {
+  -fx-background-color: #0583FA;
+}
+#menuitem_start:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_pause:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_reset:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_fullscreen:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_close:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_linear:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_exponential:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_resetregression:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_import:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_export:hover  {
+  -fx-background-color: #0583FA;
+}
+#menuitem_help:hover  {
+  -fx-background-color: #0583FA;
+}
+.choice-box {
+  -fx-background-radius: 0.0;
+  -fx-background-color: #0583FA;
+}
+#countLabel {
+  -fx-font-size: 30.0;
+}
+#TitleBar {
+  -fx-background-color: #262626;
 }
 
-#Content {
-  -fx-background-color: white;
-  -fx-prefWidth: 1920.0;
-  -fx-prefHeight: 1080.0;
-}
-
-#TabPane    {
-    -fx-prefWidth: 1920;
-    -fx-prefHeight: 800;
-    -fx-layoutY: 25.0;
-}
-
-#TabPane_Anchor {
-    minHeight: 0.0;
-    minWidth: 0.0;
-    prefHeight: 180.0;
-    prefWidth: 200.0;
-}
-
-#MenuBar {
-  -fx-background-color: #00ccff;
-  -fx-color: white;
-  -fx-text-fill: white;
-}
-
-#MenuBar_Menu {
-  -fx-text-fill: white;
-}
