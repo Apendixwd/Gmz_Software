@@ -18,7 +18,10 @@ import java.util.Arrays;
 
 public class Header {
     DataImport DataImport = new DataImport();
+    AnalyseRegression Analyse = new AnalyseRegression();
     double [] Daten;
+    double e = 2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921817413596629043572900334295260595630738132328627943490763233829880753195251019011573834187930702154089149934884167509244761460668082264800168477411853742345442437107539077744992069;
+
     // setting Seperator
     public SeparatorMenuItem separator() {
         SeparatorMenuItem separator = new SeparatorMenuItem();
@@ -52,10 +55,87 @@ public class Header {
         linearRegression.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                int countX = Daten.length;
+                int count = 0;
+                int [] x = new int[countX];
+                double [] y = Daten;
+                while (count != countX){
+                    x[count] = count;
+                    count ++;
+                }
+
+                double m = Analyse.AnalyseLinear(x,Daten,countX)[0];
+                double n = Analyse.AnalyseLinear(x,Daten,countX)[1];
+                double[] Regression = new double[countX];
+                count = 0;
+                while(count != countX){
+                    Regression[count] = m * count + n;
+                    count++;
+
+                }
+                XYChart.Series series = new XYChart.Series();
+                //setting name and the date to the series
+                series.setName("Lineare Regression");
+                int xValue = 0;
+                for (int i = 0; i < countX; i++)  {
+                    series.getData().add(new XYChart.Data(xValue,Regression[i]));
+                    String XWert = String.valueOf(xValue);
+                    String YWert = String.valueOf(Regression[i]);
+                    Messung messung = new Messung(XWert, YWert);
+                    overrideTableView.getItems().add(messung);
+                    xValue ++;
+                }
+                //adding series to the linechart
+                overridelinechart.getData().add(series);
 
             }
+
         });
-        MenuItem exponentialRegression = new MenuItem("Exponential Regression ( M^X + B");
+        MenuItem exponentialRegression = new MenuItem("Exponential Regression");
+        exponentialRegression.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                int countX = Daten.length;
+                int count = 0;
+                int [] x = new int[countX];
+                double [] y = Daten;
+                while (count != countX){
+                    x[count] = count;
+                    count ++;
+                }
+
+                double k = Analyse.AnalyseExponential(x,Daten,countX)[0];
+                double d = Analyse.AnalyseExponential(x,Daten,countX)[1];
+
+                double[] Regression = new double[countX];
+                count = 0;
+                while(count != countX){
+                    Regression[count] = d * Math.pow(e, k * count);
+                    count++;
+
+                }
+
+                XYChart.Series series = new XYChart.Series();
+                //setting name and the date to the series
+                series.setName("Exponentielle Regression");
+                int xValue = 0;
+                for (int i = 0; i < countX; i++)  {
+                    series.getData().add(new XYChart.Data(xValue,Regression[i]));
+                    String XWert = String.valueOf(xValue);
+                    String YWert = String.valueOf(Regression[i]);
+                    Messung messung = new Messung(XWert, YWert);
+                    overrideTableView.getItems().add(messung);
+                    System.out.println(Regression[xValue]);
+                    xValue ++;
+                }
+                //adding series to the linechart
+                overridelinechart.getData().add(series);
+
+
+            }
+
+        });
+
         MenuItem removeRegression = new MenuItem("Regressionen entferenen");
         // setting MenuButton "Messreihe"
         MenuItem dataImport = new MenuItem("Daten importieren");
