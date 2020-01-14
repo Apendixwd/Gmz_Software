@@ -15,13 +15,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 public class Header {
+    DataImport DataImport = new DataImport();
+    Double [] Daten = DataImport.main();
     // setting Seperator
     public SeparatorMenuItem separator() {
         SeparatorMenuItem separator = new SeparatorMenuItem();
         return separator;
     }
     // embedding Classes, Objects, usw.
-    DataImport DataImport = new DataImport();
     static DataTableView dataTableView = new DataTableView();
     static Graph graph = new Graph();
     static AreaChart overridelinechart = graph.graph();
@@ -45,6 +46,25 @@ public class Header {
         MenuItem close = new MenuItem("schließen");
         // setting MenuButton "Graph"
         MenuItem linearRegression = new MenuItem("Lineare Regression (M * X + B)");
+        linearRegression.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                XYChart.Series series = new XYChart.Series();
+                //setting name and the date to the series
+                series.setName("Messung");
+                int xValue = 0;
+                for (int i = 0; i < Daten.length; i++)  {
+                    series.getData().add(new XYChart.Data(xValue,Daten[i]));
+                    String XWert = String.valueOf(xValue);
+                    String YWert = String.valueOf(Daten[i]);
+                    Messung messung = new Messung(XWert, YWert);
+                    overrideTableView.getItems().add(messung);
+                    xValue ++;
+                }
+                //adding series to the linechart
+                overridelinechart.getData().add(series);
+            }
+        });
         MenuItem exponentialRegression = new MenuItem("Exponential Regression ( M^X + B");
         MenuItem removeRegression = new MenuItem("Regressionen entferenen");
         // setting MenuButton "Messreihe"
@@ -53,7 +73,6 @@ public class Header {
         dataImport.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Double [] Daten = DataImport.main();
                 XYChart.Series series = new XYChart.Series();
                 //setting name and the date to the series
                 series.setName("Messung");
