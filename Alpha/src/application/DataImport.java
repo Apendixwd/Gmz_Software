@@ -10,8 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DataImport {
-    public static Double [] main() {
-        Double[] Data = new Double[0];
+    public static double [] main() {
+        double[] Data = new double[0];
         Stage primaryStage = new Stage();
         FileChooser file = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
@@ -27,7 +27,7 @@ public class DataImport {
             long lineAmountCache = br.lines().count() - 1;
             int lineAmount = (int) lineAmountCache;
             int currentLine = 0;
-            Data = new Double[lineAmount];
+            Data = new double[lineAmount];
             int fLine = 0;
             String line = null;
             br2 = new BufferedReader(new FileReader(TsvFile));

@@ -15,8 +15,8 @@ public class DataTableView {
         TableColumn Column2 = new TableColumn("Messdaten in CPM");
         Column2.setCellValueFactory(new PropertyValueFactory<>("messDaten"));
         dataTableView.getColumns().add(Column1);
-        Column1.setPrefWidth(150);
-        Column2.setPrefWidth(150);
+        Column1.setPrefWidth(149);
+        Column2.setPrefWidth(149);
         dataTableView.getColumns().add(Column2);
         dataTableView.setPlaceholder(new Label("Fügen sie eine Messreihe ein, um sie hier anzuzeigen!"));
         return dataTableView;

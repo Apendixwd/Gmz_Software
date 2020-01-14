@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class Header {
     DataImport DataImport = new DataImport();
-    Double [] Daten;
+    double [] Daten;
     // setting Seperator
     public SeparatorMenuItem separator() {
         SeparatorMenuItem separator = new SeparatorMenuItem();
