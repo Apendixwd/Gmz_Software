@@ -82,7 +82,6 @@ public class Header {
                     String XWert = String.valueOf(xValue);
                     String YWert = String.valueOf(Regression[i]);
                     Messung messung = new Messung(XWert, YWert);
-                    overrideTableView.getItems().add(messung);
                     xValue ++;
                 }
                 //adding series to the linechart
@@ -124,8 +123,6 @@ public class Header {
                     String XWert = String.valueOf(xValue);
                     String YWert = String.valueOf(Regression[i]);
                     Messung messung = new Messung(XWert, YWert);
-                    overrideTableView.getItems().add(messung);
-                    System.out.println(Regression[xValue]);
                     xValue ++;
                 }
                 //adding series to the linechart
