@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
     public static void main  (String[] args) {
@@ -34,6 +35,7 @@ public class Main extends Application {
         layout.setCenter(Header.overrideGraph());
         Scene scene = new Scene(layout);
         scene.getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
+        primarystage.initStyle(StageStyle.UNDECORATED);
         primarystage.setScene(scene);
         primarystage.setMinWidth(1000);
         primarystage.setMinHeight(600);
