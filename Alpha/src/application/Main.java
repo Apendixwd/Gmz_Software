@@ -1,7 +1,9 @@
 package application;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -10,13 +12,15 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.stage.StageStyle;
 
-import java.awt.event.MouseEvent;
-
 public class Main extends Application {
+    //define your offsets here
+    private double xOffset = 0;
+    private double yOffset = 0;
     public static void main  (String[] args) {
         launch(args);
     }
-
+    private static Stage stage;
+    public static Stage getStage() { return stage; }
     @Override
     public void start (Stage primarystage) throws Exception  {
         //Defining BorderPane "layout"
@@ -37,10 +41,31 @@ public class Main extends Application {
         layout.setCenter(Header.overrideGraph());
         Scene scene = new Scene(layout);
         scene.getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
-        primarystage.initStyle(StageStyle.UNDECORATED);
-        primarystage.setScene(scene);
-        primarystage.setMinWidth(1000);
-        primarystage.setMinHeight(600);
-        primarystage.show();
+        //grab your root here
+        layout.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                xOffset = mouseEvent.getSceneX();
+                yOffset = mouseEvent.getSceneY();
+            }
+        });
+
+
+        //move around here
+        layout.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                stage.setX(mouseEvent.getScreenX() - xOffset);
+                stage.setY(mouseEvent.getScreenY() - yOffset);
+            }
+        });
+        layout.setPrefHeight(900);
+        layout.setPrefWidth(1600);
+        stage = primarystage;
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+        stage.setMinWidth(1000);
+        stage.setMinHeight(600);
+        stage.show();
     }
 }
