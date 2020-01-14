@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class AnalyseRegression {
 	
-	//Arrays für xy , xx , Ln(y) und XLn(y) werden erstellt
+	//Arrays fÃ¼r xy , xx , Ln(y) und XLn(y) werden erstellt
 		private double [] getXY(int [] x, double [] y,int countX) {
 		
 				int count = 0;
@@ -69,9 +69,9 @@ public class AnalyseRegression {
 				double Avgxy = Arrays.stream(getXY(x,y,countX)).average().orElse(Double.NaN);
 				double Avgxx = Arrays.stream(getXX(x,countX)).average().orElse(Double.NaN);
 				
-				double Zähler = Avgxy - Avgx * Avgy;
+				double ZÃ¤hler = Avgxy - Avgx * Avgy;
 				double Nenner = Avgxx - Avgx * Avgx;
-				double m = Zähler / Nenner;
+				double m = ZÃ¤hler / Nenner;
 				double n = Avgy - m * Avgx;
 				
 				double [] Result = {m,n};
@@ -85,10 +85,10 @@ public class AnalyseRegression {
 				double AvgxLny = Arrays.stream(getXLnY(x,y,countX)).average().orElse(Double.NaN);
 				double Avgxx = Arrays.stream(getXX(x,countX)).average().orElse(Double.NaN);
 			
-				double Zähler = AvgxLny - AvgLny * Avgx;
+				double ZÃ¤hler = AvgxLny - AvgLny * Avgx;
 				double Nenner = Avgxx - Avgx * Avgx;
 				double e = 2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921817413596629043572900334295260595630738132328627943490763233829880753195251019011573834187930702154089149934884167509244761460668082264800168477411853742345442437107539077744992069;
-				double k = Zähler / Nenner;
+				double k = ZÃ¤hler / Nenner;
 				double d = Math.pow(e, AvgLny - k * Avgx);
 			
 				double [] Result = {k,d};

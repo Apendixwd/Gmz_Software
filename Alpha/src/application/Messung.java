@@ -1,32 +1,25 @@
 package application;
 
-    public class Messung {
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
-        private String Zeit = null;
-        private String Cpm = null;
+public class Messung {
 
-        public Messung() {
-        }
+    private final SimpleStringProperty zeit;
+    private final SimpleStringProperty messDaten;
 
-        public Messung(String Zeit, String Cpm) {
-            this.Zeit = Zeit;
-            this.Cpm = Cpm;
-        }
-
-        public String getZeit() {
-            return Zeit;
-        }
-
-        public void setZeit(String Zeit) {
-            this.Zeit = Zeit;
-        }
-
-        public String getCpm() {
-            return Cpm;
-        }
-
-        public void setCpm(String Cpm) {
-            this.Cpm = Cpm;
-        }
+    public Messung(String zeit, String messDaten) {
+        this.zeit = new SimpleStringProperty(zeit);
+        this.messDaten = new SimpleStringProperty(messDaten);
     }
+
+    //add getters to properties with the appropriate naming convention
+    public final StringProperty zeitProperty() {
+        return zeit;
+    }
+
+    public final StringProperty messDatenProperty() {
+        return messDaten;
+    }
+}
 
