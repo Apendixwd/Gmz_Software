@@ -5,9 +5,12 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.stage.StageStyle;
+
+import java.awt.event.MouseEvent;
 
 public class Main extends Application {
     public static void main  (String[] args) {
@@ -21,16 +24,15 @@ public class Main extends Application {
         //Embed Classes and objects
         Header header = new Header();
         Graph graph = new Graph();
+        TitleBar titleBar = new TitleBar();
         DataTableView dataTableView = new DataTableView();
         OverrideGraph overrideGraph = new OverrideGraph();
         //Adding Content Sections
-        AnchorPane graphsection = new AnchorPane();
-        graphsection.getChildren().add(Header.overrideGraph());
-        AnchorPane tablesection = new AnchorPane();
-        tablesection.getChildren().add(Header.overrideTableView);
-        tablesection.setId("tablesection");
+        VBox headersection = new VBox();
+        headersection.getChildren().add(titleBar.addTitleBar());
+        headersection.getChildren().add(Header.addheader());
         //Adding Content to BorderPane
-        layout.setTop(header.addheader());
+        layout.setTop(headersection);
         layout.setRight(Header.overrideTableView);
         layout.setCenter(Header.overrideGraph());
         Scene scene = new Scene(layout);

@@ -184,3 +184,9 @@
   }
   .menu-button .label   {
   -fx-font-size: 12;}
+  .AreaChart .label {
+    -fx-text-fill: grey;
+  }
+  #TitleBar {
+  -fx-background-color: #2e2e2e
+  }

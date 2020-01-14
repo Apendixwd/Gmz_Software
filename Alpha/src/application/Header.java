@@ -17,13 +17,13 @@ import javafx.scene.layout.HBox;
 import java.util.Arrays;
 
 public class Header {
-    DataImport DataImport = new DataImport();
-    AnalyseRegression Analyse = new AnalyseRegression();
-    double [] Daten;
-    double e = 2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921817413596629043572900334295260595630738132328627943490763233829880753195251019011573834187930702154089149934884167509244761460668082264800168477411853742345442437107539077744992069;
+    static DataImport DataImport = new DataImport();
+    static AnalyseRegression Analyse = new AnalyseRegression();
+    static double [] Daten;
+    static double e = 2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059921817413596629043572900334295260595630738132328627943490763233829880753195251019011573834187930702154089149934884167509244761460668082264800168477411853742345442437107539077744992069;
 
     // setting Seperator
-    public SeparatorMenuItem separator() {
+    public static SeparatorMenuItem separator() {
         SeparatorMenuItem separator = new SeparatorMenuItem();
         return separator;
     }
@@ -43,7 +43,7 @@ public class Header {
     }
 
     // Creating a Header
-    public HBox addheader()   {
+    public static HBox addheader()   {
         MenuItem messureStart = new MenuItem("Auzeichnung starten");
         MenuItem messurePause = new MenuItem("Aufzeichnung pausieren");
         MenuItem messureReset = new MenuItem("Auzeichnung zurücksetzen");

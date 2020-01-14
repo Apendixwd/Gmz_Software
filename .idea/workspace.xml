@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="XSLT Stylesheet" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,26 +94,26 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="634" y="280" key="FileChooserDialogImpl/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1576595356836" />
-    <state width="1814" height="172" key="GridCell.Tab.0.bottom" timestamp="1579020515929">
+    <state width="1814" height="65" key="GridCell.Tab.0.bottom" timestamp="1579027668508">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state width="1814" height="172" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579020515929" />
-    <state width="1815" height="172" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579020411481" />
-    <state width="1814" height="172" key="GridCell.Tab.0.center" timestamp="1579020515928">
+    <state width="1814" height="65" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579027668508" />
+    <state width="1815" height="65" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579027270522" />
+    <state width="1814" height="65" key="GridCell.Tab.0.center" timestamp="1579027668508">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state width="1814" height="172" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579020515928" />
-    <state width="1815" height="172" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579020411481" />
-    <state width="1814" height="172" key="GridCell.Tab.0.left" timestamp="1579020515928">
+    <state width="1814" height="65" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579027668508" />
+    <state width="1815" height="65" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579027270522" />
+    <state width="1814" height="65" key="GridCell.Tab.0.left" timestamp="1579027668508">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state width="1814" height="172" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579020515928" />
-    <state width="1815" height="172" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579020411480" />
-    <state width="1814" height="172" key="GridCell.Tab.0.right" timestamp="1579020515929">
+    <state width="1814" height="65" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579027668508" />
+    <state width="1815" height="65" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579027270522" />
+    <state width="1814" height="65" key="GridCell.Tab.0.right" timestamp="1579027668508">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state width="1814" height="172" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579020515929" />
-    <state width="1815" height="172" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579020411481" />
+    <state width="1814" height="65" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579027668508" />
+    <state width="1815" height="65" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579027270522" />
     <state x="558" y="392" key="Performance.Activity.Monitor" timestamp="1576605397932">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
