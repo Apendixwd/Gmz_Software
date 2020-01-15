@@ -20,7 +20,7 @@ public class DataTableView {
         Column2.setPrefWidth(199);
         Column2.setSortable(false);
         dataTableView.getColumns().add(Column2);
-        dataTableView.setPlaceholder(new Label("Fuegen sie eine Messreihe ein!"));
+        dataTableView.setPlaceholder(new Label("F\u00FCgen sie eine Messreihe ein!"));
         return dataTableView;
     }
 }

@@ -25,9 +25,8 @@
 .menu-item:hover    {
     -fx-background-color: #0DA0FC;
 }
-.area-chart .label  {
--fx-text-fill: black;
-}
+
+
 
 
  // setting Design for Tab Pane
@@ -191,5 +190,11 @@
     -fx-text-fill: grey;
   }
   #TitleBar {
-  -fx-background-color: #2e2e2e
+  -fx-background-color: #2e2e2e;
   }
+.chart-legend {
+-fx-background-color: #2e2e2e;}
+}
+.axis .label {
+-fx-text-fill: #2e2e2e;
+}

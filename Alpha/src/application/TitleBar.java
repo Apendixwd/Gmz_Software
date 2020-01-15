@@ -41,7 +41,6 @@ public class TitleBar {
         Icon2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                System.out.println("Doin sth");
                 if (i == 0) {
                     Main.getStage().setMaximized(true);
                     i++;
@@ -56,7 +55,6 @@ public class TitleBar {
         Icon3.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                System.out.println("Doin sth");
                 Main.getStage().setIconified(true);
             }
         });

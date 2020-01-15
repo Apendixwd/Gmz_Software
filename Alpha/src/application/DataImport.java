@@ -16,7 +16,7 @@ public class DataImport {
         FileChooser file = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
         file.getExtensionFilters().add(extFilter);
-        file.setTitle("Datei öffnen");
+        file.setTitle("Datei \u00F6ffnen");
         File Datei = file.showOpenDialog(primaryStage);
         String TsvFile = "" + Datei;
         String FieldDelimiter = "\t";

@@ -53,16 +53,16 @@ public class Header {
     public static HBox addheader()   {
         MenuItem messureStart = new MenuItem("Auzeichnung starten");
         MenuItem messurePause = new MenuItem("Aufzeichnung pausieren");
-        MenuItem messureReset = new MenuItem("Auzeichnung zurücksetzen");
+        MenuItem messureReset = new MenuItem("Auzeichnung zur\u00FCcksetzen");
         MenuItem fullscreen = new MenuItem("Vollbild");
         fullscreen.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Main.getStage().setFullScreenExitHint("Um den Vollbildmodus zu verlassen, drücken sie \"ESC\"!");
+                Main.getStage().setFullScreenExitHint("Um den Vollbildmodus zu verlassen, dr\u00FCcken sie \"ESC\"!");
                 Main.getStage().setFullScreen(true);
             }
         });
-        MenuItem close = new MenuItem("schließen");
+        MenuItem close = new MenuItem("schlie\u00DFen");
         close.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -71,7 +71,7 @@ public class Header {
         });
         // setting MenuButton "Graph"
         // setting Eventhandler "Lineare Regression"
-        MenuItem linearRegression = new MenuItem("Lineare Regression (M * X + B)");
+        MenuItem linearRegression = new MenuItem("Lineare Regression");
         linearRegression.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -95,7 +95,9 @@ public class Header {
 
                     }
                     //setting name and the date to the series
-                    serieslinear.setName(m + "x X +" + n );
+                    double roundm = Math.round(100.0 * m) / 100.0;
+                    double roundn = Math.round(100 * n) / 100.0;
+                    serieslinear.setName(roundm + " * X + " + roundn);
                     int xValue = 0;
                     for (int i = 0; i < countX; i++) {
                         serieslinear.getData().add(new XYChart.Data(xValue, Regression[i]));
@@ -111,7 +113,7 @@ public class Header {
                 }
                 else    {
                     overridelinechart.getData().remove(serieslinear);
-                    linearRegression.setText("Lineare Regression (M * X + B)");
+                    linearRegression.setText("Lineare Regression");
                     i--;
                 }
             }
@@ -143,7 +145,10 @@ public class Header {
                     }
 
                     //setting name and the date to the series
-                    seriesexponential.setName("Exponentielle Regression");
+                    double roundk = Math.round(100000 * k) / 100000;
+                    double roundd = Math.round(100 * d) / 100.0;
+                    seriesexponential.setName(roundd + " * e^ " + k + " * X");
+
                     int xValue = 0;
                     for (int i = 0; i < countX; i++) {
                         seriesexponential.getData().add(new XYChart.Data(xValue, Regression[i]));
@@ -220,7 +225,7 @@ public class Header {
         MenuButton menuGraph = new MenuButton("Graph", null, linearRegression, exponentialRegression, separator(), removeRegression);
         MenuButton menuMessure = new MenuButton("Messreihe", null, dataImport, dataExport, separator(), dataRemove);
         MenuButton menuHelp = new MenuButton("Hilfe", null, info);
-        MenuButton menuMenue = new MenuButton("Menü", null, messureStart, messurePause, messureReset, separator(), fullscreen, separator(), close);
+        MenuButton menuMenue = new MenuButton("Men\u00FC", null, messureStart, messurePause, messureReset, separator(), fullscreen, separator(), close);
         //setting Parent
         HBox addheader = new HBox();
         addheader.setStyle("-fx-background-color: #2b2b2b;");
