@@ -95,7 +95,7 @@ public class Header {
 
                     }
                     //setting name and the date to the series
-                    serieslinear.setName("Lineare Regression");
+                    serieslinear.setName(m + "x X +" + n );
                     int xValue = 0;
                     for (int i = 0; i < countX; i++) {
                         serieslinear.getData().add(new XYChart.Data(xValue, Regression[i]));

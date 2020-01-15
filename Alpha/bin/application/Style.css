@@ -25,6 +25,9 @@
 .menu-item:hover    {
     -fx-background-color: #0DA0FC;
 }
+.area-chart .label  {
+-fx-text-fill: black;
+}
 
 
  // setting Design for Tab Pane

@@ -34,7 +34,6 @@ public class TitleBar {
         Icon1.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                System.out.println("Doin sth");
                 Main.getStage().close();
             }
         });
