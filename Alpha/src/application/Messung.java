@@ -1,8 +1,11 @@
+/* ####### setting Meta ####### */
 package application;
 
+/* ####### setting Imports ####### */
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/* ####### setting Messung Class "Messung.java" ####### */
 public class Messung {
 
     private final SimpleStringProperty zeit;
@@ -17,7 +20,6 @@ public class Messung {
     public final StringProperty zeitProperty() {
         return zeit;
     }
-
     public final StringProperty messDatenProperty() {
         return messDaten;
     }

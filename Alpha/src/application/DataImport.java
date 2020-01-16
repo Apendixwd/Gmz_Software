@@ -1,5 +1,7 @@
+/* ####### setting Meta ####### */
 package application;
 
+/* ####### setting Imports ####### */
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -9,19 +11,28 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/* ####### setting DataImport Class "DataImport.java" ####### */
 public class DataImport {
+    /* ####### Adding attributes ####### */
+    static File Datei;
+    static double[] Data = new double[0];
+    static Stage primaryStage = new Stage();
+    static BufferedReader br;
+    static BufferedReader br2;
+    // Adding object instances
+    static Fehlermeldung error = new Fehlermeldung();
+    // adding DataImport.main()
     public static double [] main() {
-        double[] Data = new double[0];
-        Stage primaryStage = new Stage();
+        int count = 0;
+        // Build open file dialog
         FileChooser file = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
         file.getExtensionFilters().add(extFilter);
-        file.setTitle("Datei \u00F6ffnen");
-        File Datei = file.showOpenDialog(primaryStage);
+        file.setTitle("Datei \u00f6ffnen");
+        Datei = file.showOpenDialog(primaryStage);
         String TsvFile = "" + Datei;
         String FieldDelimiter = "\t";
-        BufferedReader br;
-        BufferedReader br2;
+        // read TSV file
         try {
             br = new BufferedReader(new FileReader(TsvFile));
             long lineAmountCache = br.lines().count() - 1;
@@ -39,6 +50,7 @@ public class DataImport {
                 } else {
                     fields[3] = fields[3].replace(",", ".");
                     double DataSolution = Double.parseDouble(fields[3]);
+                    // adding Data to Data-array
                     Data[currentLine] = DataSolution;
                     currentLine++;
                 }
@@ -52,6 +64,17 @@ public class DataImport {
             Logger.getLogger(Main.class.getName())
                     .log(Level.SEVERE, null, ex);
         }
+        catch (Exception e) {
+            String errorTitle = "Error";
+            String errorMessage = "Die Datei ist Fehlerhaft. Bitte veruschen sie es erneut!";
+            error.showErrorMessage(errorTitle, errorMessage);
+            count++;
+
+        }
+        if (count != 0) {
+            Data = null;
+        }
+        else    {}
         return Data;
     }
 }

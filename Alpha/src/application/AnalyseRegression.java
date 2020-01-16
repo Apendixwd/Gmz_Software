@@ -1,7 +1,10 @@
+/* ####### setting Meta ####### */
 package application;
 
+/* ####### setting Imports ####### */
 import java.util.Arrays;
 
+/* ####### setting AnalyseRegression Class "AnalyseRegression.java" ####### */
 public class AnalyseRegression {
 	
 	//Arrays für xy , xx , Ln(y) und XLn(y) werden erstellt
@@ -97,6 +100,4 @@ public class AnalyseRegression {
 			return Result;
 			
 		}
-
-	
 }

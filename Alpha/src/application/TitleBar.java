@@ -1,5 +1,7 @@
+/* ####### setting Meta ####### */
 package application;
 
+/* ####### setting Imports ####### */
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
@@ -7,57 +9,75 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 
+/* ####### setting TitleBar Class "TitleBar.java" ####### */
 public class TitleBar {
-    int i = 0;
-    Main main = new Main();
-    public HBox addTitleBar()   {
-        HBox titleBar = new HBox();
 
-        ImageView close = new ImageView();
-        Image closeI = new Image("/pictures/Close.png");
-        close.setImage(closeI);
+    /* ####### Adding Attributes ####### */
+    int count = 0;
+    // Building Nodes
+    HBox titleBar = new HBox();
+    // Build ImageView for icons
+    ImageView close = new ImageView();
+    ImageView fullscreen = new ImageView();
+    ImageView hide = new ImageView();
+    //Build Icon for TitleBar-Buttons
+    Image closeI = new Image("/pictures/Close.png");
+    Image fullscreenI = new Image("/pictures/fullscreen.png");
+    Image hideI = new Image("/pictures/hide.png");
+    // Build Node for TitleBar-Buttons
+    AnchorPane Icon1 = new AnchorPane();
+    AnchorPane Icon2 = new AnchorPane();
+    AnchorPane Icon3 = new AnchorPane();
+
+    public HBox addTitleBar()   {
+
+        // setting icon size
         close.setFitWidth(20);
         close.setFitHeight(20);
-        ImageView fullscreen = new ImageView();
-        Image fullscreenI = new Image("/pictures/fullscreen.png");
-        fullscreen.setImage(fullscreenI);
         fullscreen.setFitWidth(20);
         fullscreen.setFitHeight(20);
-        ImageView hide = new ImageView();
-        Image hideI = new Image("/pictures/hide.png");
-        hide.setImage(hideI);
         hide.setFitWidth(20);
         hide.setFitHeight(20);
-        AnchorPane Icon1 = new AnchorPane();
+
+        // setting icon function
         Icon1.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 Main.getStage().close();
             }
         });
-        AnchorPane Icon2 = new AnchorPane();
         Icon2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                if (i == 0) {
+                if (count == 0) {
                     Main.getStage().setMaximized(true);
-                    i++;
+                    count++;
                 }
                 else    {
                     Main.getStage().setMaximized(false);
-                    i--;
+                    count--;
                 }
             }
         });
-        AnchorPane Icon3 = new AnchorPane();
         Icon3.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 Main.getStage().setIconified(true);
             }
         });
+
+        // setting icon layout
+        Icon1.setMaxWidth(20);
+        Icon1.setMaxHeight(20);
+        Icon2.setMaxWidth(20);
+        Icon2.setMaxHeight(20);
+        Icon3.setMaxWidth(20);
+        Icon3.setMaxHeight(20);
+        // Adding children
+        close.setImage(closeI);
+        fullscreen.setImage(fullscreenI);
+        hide.setImage(hideI);
         Icon1.getChildren().add(close);
         Icon2.getChildren().add(fullscreen);
         Icon3.getChildren().add(hide);
@@ -65,8 +85,10 @@ public class TitleBar {
         titleBar.getChildren().add(Icon2);
         titleBar.getChildren().add(Icon1);
         titleBar.setId("TitleBar");
-        titleBar.setPrefHeight(25);
+        titleBar.setPrefHeight(18);
         titleBar.setAlignment(Pos.CENTER_RIGHT);
+        titleBar.setMinHeight(25);
+        // return TitleBar
         return titleBar;
     }
 }

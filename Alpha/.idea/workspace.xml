@@ -19,10 +19,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/2048/src/sample" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ottor\Documents\GitHub\Gmz_Software\Alpha" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ottor\Documents\GitHub\Gmz_Software\Alpha\src\application" />
+      <recent name="C:\Users\ottor\Documents\GitHub\Gmz_Software\Alpha\src\pictures" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
@@ -72,26 +81,30 @@
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
     <state x="621" y="325" key="FileChooserDialogImpl/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764702508" />
-    <state width="1814" height="295" key="GridCell.Tab.0.bottom" timestamp="1578764682729">
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1579187162045">
+      <screen x="1982" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579186571609" />
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579187162045" />
+    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1579187162044">
+      <screen x="1982" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579186571608" />
+    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579187162044" />
+    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1579187162044">
+      <screen x="1982" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579186571608" />
+    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579187162044" />
+    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1579187162044">
+      <screen x="1982" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1814" height="295" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579186571608" />
+    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@1982.0.1858.1080" timestamp="1579187162044" />
+    <state x="395" y="158" key="SettingsEditor" timestamp="1579183983612">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state width="1814" height="295" key="GridCell.Tab.0.bottom/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764682729" />
-    <state width="1814" height="295" key="GridCell.Tab.0.center" timestamp="1578764682729">
-      <screen x="0" y="0" width="1857" height="1080" />
-    </state>
-    <state width="1814" height="295" key="GridCell.Tab.0.center/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764682729" />
-    <state width="1814" height="295" key="GridCell.Tab.0.left" timestamp="1578764682728">
-      <screen x="0" y="0" width="1857" height="1080" />
-    </state>
-    <state width="1814" height="295" key="GridCell.Tab.0.left/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764682728" />
-    <state width="1814" height="295" key="GridCell.Tab.0.right" timestamp="1578764682729">
-      <screen x="0" y="0" width="1857" height="1080" />
-    </state>
-    <state width="1814" height="295" key="GridCell.Tab.0.right/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764682729" />
-    <state x="395" y="158" key="SettingsEditor" timestamp="1578764001601">
-      <screen x="0" y="0" width="1857" height="1080" />
-    </state>
-    <state x="395" y="158" key="SettingsEditor/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1578764001601" />
+    <state x="395" y="158" key="SettingsEditor/0.0.1857.1080/1982.0.1858.1080@0.0.1857.1080" timestamp="1579183983612" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Alpha$Main.ic" NAME="Main Coverage Results" MODIFIED="1578764498223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

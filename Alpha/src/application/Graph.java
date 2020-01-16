@@ -21,9 +21,9 @@ public class Graph {
     public AreaChart graph() {
         //Defining Label for Axis
         xaxis.setLabel("T in Sekunden");
-
         yaxis.setLabel("Messung in CPM");
         //Defining Messure Series
+        areachart.setCreateSymbols(false);
         return areachart;
     }
 }
